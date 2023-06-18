@@ -14,6 +14,6 @@ Python has different types of operators for different operations. To create a ca
 |//|`Floor Division`            |``` 15//7 ```            |
 
 ## Note :
-Expontial (5**3) = 5X5X5
+Expontial (5**3) = 5X5X5 = 125
 
 Modulus means remainder of the division
