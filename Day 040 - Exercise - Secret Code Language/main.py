@@ -9,18 +9,16 @@ def reverse(secretCode):
 
     sizeOfCode = len(secretCode)
     
-    for i in secretCode(sizeOfCode/2):
+    reversedCode = ""
+    for i in range(sizeOfCode - 1, -1, -1):
+        reversedCode += secretCode[i]
 
-        temp = secretCode[i]
-        secretCode[i] = secretCode[sizeOfCode-i-1]
-        secretCode[sizeOfCode-i-1] = secretCode[i]
-
-    return secretCode
+    return reversedCode
 
 
 def coding(secretCode):
 
-    if(len(secretCode)<3):
+    if(len(secretCode)<=3):
         return reverse(secretCode)
     else:
         # Slicing char and append first char at last
@@ -30,7 +28,7 @@ def coding(secretCode):
         for i in range(6):
             randomChar = random.choice(string.ascii_letters)
 
-            if(i<3): 
+            if i<3 : 
                 secretCode = randomChar + secretCode
             else:
                 secretCode =  secretCode + randomChar 
@@ -40,12 +38,16 @@ def coding(secretCode):
 
 def decoding(secretCode):
 
-    if(len(secretCode)<3):
+    if len(secretCode)<=3:
         return reverse(secretCode)
     else:
-        return secretCode[3:-3] 
+        secretCode = secretCode[3:-3] 
+        secretCode = secretCode[-1] + secretCode[:-1]
+        return secretCode
 
-if(codingOrDecoding=="1"):
+
+
+if codingOrDecoding=="1":
     print(coding(secretCode))
 else:
     print(decoding(secretCode))
