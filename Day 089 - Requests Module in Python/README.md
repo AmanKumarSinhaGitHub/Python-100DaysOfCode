@@ -34,5 +34,4 @@ print(response.text)
 In this example, we send a POST request to a web service to authenticate a user. We include a custom User-Agent header and a JSON payload with the user's credentials.
 
 ## bs4 Module
-There is another module called BeautifulSoup which is used for web scraping in Python. I have personally used bs4 module to finish a lot of freelancing task.
-
+There is another module called BeautifulSoup which is used for web scraping in Python. 
